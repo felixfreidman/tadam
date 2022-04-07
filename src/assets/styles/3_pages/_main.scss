@@ -75,8 +75,10 @@ a {
         color: #000000;
         margin-right: 61px;
         transition: all 0.3s ease;
-        &:hover {
-            color: #4598f6;
+        a {
+            &:hover {
+                color: #4598f6;
+            }
         }
     }
     &__apply {}
@@ -235,6 +237,12 @@ a {
                 max-width: 636px;
                 margin-top: 54px;
             }
+            &__image {
+                transition: all 0.3s ease;
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
             &__header {
                 font-weight: 700;
                 font-size: 48px;
@@ -259,6 +267,10 @@ a {
                     margin-right: 24px;
                     display: block;
                     background-repeat: no-repeat;
+                    transition: all 0.3s ease;
+                    &:hover {
+                        transform: scale(1.1);
+                    }
                     &--google {
                         background-image: url("./assets/images/content/main__google.svg");
                     }
@@ -276,25 +288,101 @@ a {
         .ability-container {
             width: 100%;
             margin-bottom: 48px;
+            display: flex;
+            align-items: flex-start;
             &__card {
                 margin-right: 80px;
                 display: flex;
                 flex-direction: column;
+                width: 344px;
                 align-items: start;
                 .card-image {
                     margin-bottom: 20px;
+                    transition: all 0.3s ease;
+                    &:hover {
+                        transform: scale(1.5);
+                    }
                 }
                 .card-header {
                     font-weight: 700;
                     font-size: 20px;
                     line-height: 23px;
                     color: #000000;
+                    margin-bottom: 12px;
                 }
                 .card-content {
                     font-weight: 500;
                     font-size: 18px;
                     line-height: 21px;
                     color: #9097a3;
+                }
+            }
+        }
+    }
+    &--everybody {
+        display: flex;
+        flex-direction: column;
+        .everybody-container {
+            display: flex;
+            align-items: flex-start;
+            border-radius: 24px;
+            padding-left: 48px;
+            padding-top: 48px;
+            width: calc(100% - 48px);
+            position: relative;
+            height: 512px;
+            margin-bottom: 32px;
+            overflow: hidden;
+            &--blue {
+                background: #8ec3ff;
+            }
+            &--yellow {
+                background: #facb54;
+            }
+            &--green {
+                background: #6bc88e;
+            }
+            &__box {
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                max-width: 530px;
+            }
+            &__counter {
+                color: rgba(255, 255, 255, 0.4);
+                font-weight: 700;
+                font-size: 40px;
+                line-height: 47px;
+                margin-bottom: 32px;
+            }
+            &__header {
+                font-weight: 700;
+                font-size: 32px;
+                line-height: 38px;
+                color: #ffffff;
+                margin-bottom: 20px;
+            }
+            &__list {
+                margin-top: -20px;
+                list-style: disc;
+                margin-left: 40px;
+            }
+            &__content {
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 21px;
+                color: #ffffff;
+            }
+            &__subheader {
+                margin-bottom: 21px;
+            }
+            &__image {
+                position: absolute;
+                bottom: -52px;
+                right: 0;
+                transition: all 0.3s ease;
+                &:hover {
+                    transform: scale(1.1);
                 }
             }
         }
