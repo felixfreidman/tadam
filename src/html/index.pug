@@ -4,5 +4,23 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Document
+        link(rel="stylesheet", href="./style.min.css")
+        link(rel="shortcut icon", href="./assets/images/content/favicon.png", type="image/x-icon")
+        title Tadam
     body 
+        header.header
+            .header__logo-container
+                a(href="./index.html") 
+                    .logo 
+                        img(src="./assets/images/content/logo.svg", alt="Company Logo")
+                    .logo-caption Tadam
+            nav.header__navigation
+                a.navigation-link(href="#toAbout") О проекте
+                a.navigation-link(href="#toProcess") Как работает
+                a.navigation-link(href="#toAbilities") Возможности
+                a.navigation-link(href="#toHelp") FAQ
+            .header__phone 
+                a(href="tel:+79991235476") +7 999 123 54 76 
+            .header__apply.apply-btn Попробовать
+        main.main 
+        footer.footer
