@@ -353,8 +353,8 @@ a {
                 justify-content: flex-start;
             }
             &__card {
-                max-width: 352px;
-                width: 352px;
+                min-width: 352px;
+                width: 33%;
                 max-height: 138px;
                 height: 138px;
                 padding: 24px;
