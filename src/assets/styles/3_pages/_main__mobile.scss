@@ -1,0 +1,45 @@
+@media screen and (max-width: 1500px) {
+    .header {
+        padding: 17px 100px;
+        width: calc(100% - 200px);
+        &__logo-container {
+            .logo {}
+            .logo-caption {}
+        }
+        &__navigation {
+            .navigation-link {
+                &:hover {}
+            }
+        }
+        &__phone {
+            &:hover {}
+        }
+        &__apply {}
+    }
+    .main {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        overflow-y: hidden;
+        .section {
+            padding: 96px 100px 28px;
+            width: calc(100% - 200px);
+        }
+        &--greeting {
+            padding: 153px 100px 96px !important;
+            background: #f2f3f5;
+            .greeting-container {
+                .greeting-header {}
+                .greeting-subheader {
+                    font-weight: 500;
+                    font-size: 22px;
+                    line-height: 28px;
+                    color: #000000;
+                    &__link {
+                        color: #4598f6;
+                    }
+                }
+            }
+        }
+    }
+}

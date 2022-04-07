@@ -10,9 +10,9 @@ html(lang="en")
     body 
         header.header
             .header__logo-container
-                a(href="./index.html") 
                     .logo 
-                        img(src="./assets/images/content/logo.svg", alt="Company Logo")
+                        a(href="./index.html") 
+                            img(src="./assets/images/content/logo.svg", alt="Company Logo")
                     .logo-caption Tadam
             nav.header__navigation
                 a.navigation-link(href="#toAbout") О проекте
@@ -22,5 +22,88 @@ html(lang="en")
             .header__phone 
                 a(href="tel:+79991235476") +7 999 123 54 76 
             .header__apply.apply-btn Попробовать
-        main.main 
+        main.main
+            section.section.main--greeting 
+                .blue-circle.blue-circle--left 
+                .blue-circle.blue-circle--right  
+                .section-container 
+                    .greeting-container 
+                        .greeting-header Реклама вашего мероприятия
+                        .greeting-subheader 
+                            | Управляйте рекламой без рутины и лишних расходов
+                            br
+                            | Уже 
+                            a(href="#").greeting-subheader__link более 1 000 активных пользователей
+                            |  в Москве
+                        .greeting-button.apply-btn Попробовать
+                    .greeting-image 
+                        img(src="./assets/images/content/main__greeting.svg", alt="Main Greeting")
+                .stats-container 
+                    .stats-container__header Исходя из статистики рекламодателей Tadam
+                    .stats-container__cards
+                        .stats-container__card 
+                            .card-image 
+                                img(src="./assets/images/content/main__stats1.svg", alt="")
+                            .card-header 520 ₽ 
+                            .card-content Средняя стоимость привлечения клиента
+                        .stats-container__card 
+                            .card-image 
+                                img(src="./assets/images/content/main__stats2.svg", alt="")
+                            .card-header 6 часов
+                            .card-content До получения первых клиентов
+                        .stats-container__card 
+                            .card-image 
+                                img(src="./assets/images/content/main__stats3.svg", alt="")
+                            .card-header до 1 000 новых клиентов 
+                            .card-content На мероприятие любой тематики
+            section.section.main--advert 
+                .adverter-container
+                    .content 
+                        .adverter-container__header Tadam — социальная сеть о развлечениях
+                        .adverter-container__subheader Мы — развлекательный навигатор нового поколения, который первым оперативно сообщает и продвигает события и мероприятия, которые нельзя пропустить
+                        .adverter-container__download 
+                            a(href="#").download-link.download-link--google 
+                            a(href="#").download-link.download-link--apple
+                    .adverter-container__image 
+                        img(src="./assets/images/content/main_advert__phone.svg", alt="Advert Image")
+            section.section.main--ability
+                .section-header Tadam поможет
+                .ability-container 
+                    .ability-container__card 
+                        .card-image
+                            img(src="./assets/images/content/main__ability1.svg", alt="Ability 1")
+                        .card-header Управлять трафиком
+                        .card-content В нашем приложении тысячи пользователей, которые постоянно ищут интересные мероприятия и локации и хотят разнообразить свой досуг
+                    .ability-container__card 
+                        .card-image
+                            img(src="./assets/images/content/main__ability2.svg", alt="Ability 2")
+                        .card-header Работать с узнаваемостью 
+                        .card-content Весь город узнает о вашем заведении или событии, сотни людей захотят его посетить
+                    .ability-container__card 
+                        .card-image
+                            img(src="./assets/images/content/main__ability3.svg", alt="Ability 3")
+                        .card-header С пиаром Вашего событиям
+                        .card-content Чем больше людей узнает о вашем событии, тем больше своих друзей и знакомых они пригласят!
+                .ability-container 
+                    .ability-container__card 
+                        .card-image
+                            img(src="./assets/images/content/main__ability4.svg", alt="Ability 4")
+                        .card-header Собирать контакты и заявки
+                        .card-content Максимально удобно собирать заявки в одном сервисе. А вашим пользователям тоже будет удобно пройти простую понятную регистрацию.
+                    .ability-container__card 
+                        .card-image
+                            img(src="./assets/images/content/main__ability5.svg", alt="Ability 5")
+                        .card-header Собирать обратную связь
+                        .card-content В Tadam вам будут доступны контакты людей, которые зарегистрировались на ваше событие. А также чат события, где будут видны честные комментарии участников.
+                    .ability-container__card 
+                        .card-image
+                            img(src="./assets/images/content/main__ability6.svg", alt="Ability 6")
+                        .card-header Сформировать лояльность
+                        .card-content Аудитория доверяет проверенным организаторам. В Tadam пользователям будет видно историю ваших событий и отзывы о прошедших мероприятий.
+
+            section.section.main--everybody
+            section.section.main--level
+            section.section.main--now
+            section.section.main--help
+
         footer.footer
