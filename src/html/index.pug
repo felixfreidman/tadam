@@ -22,6 +22,26 @@ html(lang="en")
             .header__phone 
                 a(href="tel:+79991235476") +7 999 123 54 76 
             .header__apply.apply-btn Попробовать
+        .mobile-header
+            .logo-container
+                a(href="#toMain") 
+                    img.logo#toMain(src="./assets/images/content/logo.svg" alt="Company Logo")
+                span.logo-caption Tadam
+            .mobile-header__burger-menu
+                span.cross-one--mobile 
+                span.cross-two--mobile
+                span.cross-left
+        .mobile-menu
+            .navigation#mobileNavigation
+                a.navigation-link(href="#toGreeting") О системе
+                a.navigation-link(href="#toProcess") Как работает
+                a.navigation-link(href="toAbilities") Возможности
+                a.navigation-link(href="#toHelp") Помощь
+        
+            .contacts
+                a(href="tel:++79991235476") +7 999 123 54 76
+            .apply
+                .apply-btn#headerApply Попробовать
         main.main
             section.section.main--greeting 
                 .blue-circle.blue-circle--left 
@@ -243,6 +263,30 @@ html(lang="en")
                 a(href="./privacy").company-privacy Политика конфиденциальности
                 a(href="./agreement").company-agreement Пользовательское соглашение
                 a(href="https://yurin.biz" target="_blank").company-developer Сделано в Студии Юрина
+        .dark-layer.js--hidden
+            .form.apply-form#applyForm 
+                .form-close#closeForm
+                    span.cross-one 
+                    span.cross-two
+                .form-header Оставить заявку
+                .form-subheader Заполните форму и получите демо-доступ к рекламному кабинету Tadam
+                label(for="userName") 
+                    input.form-input#userName(type="text", name="userName", placeholder="ФИО")
+                label(for="userCompany") 
+                    input.form-input#userCompany(type="text", name="userName" ,placeholder="E-mail")
+                label(for="userPhone") 
+                    input.form-input#userPhone(type="text", name="userName" ,placeholder="Телефон", data-inputmask="'mask' : '+7(999) 999-99-99'", inputmode="text")
+                
+                button.form-button(type="submit") Попробовать
+                .form-caption Нажимая на кнопку, вы автоматически соглашаетесь с нашей политикой конфиденциальности
+            .applied-screen.js--hidden#appliedForm
+                .form-close#closeAppliedForm
+                    span.cross-one 
+                    span.cross-two
+                img.applied-icon(src="./assets/images/content/main_applied.png", alt="Form Applied")
+                .applied-header Спасибо за заявку
+                .applied-subheader Менеджер свяжется с вами в ближайшее время
+        
         script(src="./assets/js/jquery.min.js") 
         script(src="./assets/js/plugins.min.js") 
         script(src="./assets/js/main.min.js") 
