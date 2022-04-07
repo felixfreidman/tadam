@@ -16,6 +16,19 @@
         }
         &__apply {}
     }
+    .footer {
+        padding: 17px 100px;
+        width: calc(100% - 200px);
+        .footer-row {
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            &--smalled {
+                display: flex;
+                width: calc(100%);
+            }
+        }
+    }
     .main {
         display: flex;
         flex-direction: column;
