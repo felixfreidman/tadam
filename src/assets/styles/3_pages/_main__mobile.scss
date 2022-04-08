@@ -89,6 +89,242 @@
                 }
             }
         }
+        &--now {
+            padding-bottom: 96px !important;
+            background: #4598f6;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            &:hover {
+                .now-container__image {
+                    transform: scale(1.1);
+                }
+            }
+            .now-header {
+                font-feature-settings: "pnum" on, "lnum" on;
+                font-weight: 700;
+                font-size: 48px;
+                line-height: 56px;
+                color: #ffffff;
+                margin-bottom: 24px;
+                max-width: 754px;
+            }
+            .now-subheader {
+                font-feature-settings: "pnum" on, "lnum" on;
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 23px;
+                color: #ffffff;
+                max-width: 754px;
+                margin-bottom: 48px;
+            }
+            .now-container {
+                display: flex;
+                &__button {
+                    background-color: #fff;
+                    font-feature-settings: "pnum" on, "lnum" on;
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 19px;
+                    text-align: center;
+                    color: #000000;
+                    height: fit-content;
+                    width: 219px;
+                    margin-right: 88px;
+                }
+                &__image {
+                    transition: all 0.3s ease;
+                    width: calc(100% - 340px);
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+        &--help {
+            padding-bottom: 131px !important;
+            flex-direction: column;
+            align-items: start;
+            transition: all 0.3s ease;
+            .section-header {
+                max-width: 100%;
+                width: 100%;
+                transition: all 0.3s ease;
+            }
+            .faq-container {
+                max-width: 766px;
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                .faq-block {
+                    width: 100%;
+                    max-height: 30px;
+                    padding-bottom: 32px;
+                    overflow: hidden;
+                    transition: all 0.3s ease;
+                    border-bottom: 1px solid #f2f3f5;
+                    margin-bottom: 34px;
+                    cursor: pointer;
+                    .faq-question {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 50px;
+                        transition: all 0.3s ease;
+                        &__content {
+                            width: 694px;
+                            font-feature-settings: "pnum" on, "lnum" on;
+                            font-weight: 700;
+                            font-size: 24px;
+                            line-height: 28px;
+                            color: #000000;
+                            transition: all 0.3s ease;
+                        }
+                        .question-indicator {
+                            width: 32px;
+                            height: 32px;
+                            background-color: none;
+                            border-radius: 50%;
+                            position: relative;
+                            transition: all 0.3s ease;
+                            margin-left: 24px;
+                            .cross-one {
+                                height: 2px;
+                                width: 16px;
+                                background-color: #4598f6;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                right: 0;
+                                bottom: 0;
+                                margin: auto;
+                                transition: all 0.3s ease;
+                            }
+                            .cross-two {
+                                width: 2px;
+                                height: 16px;
+                                background-color: #4598f6;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                right: 0;
+                                bottom: 0;
+                                margin: auto;
+                                transition: all 0.3s ease;
+                            }
+                        }
+                    }
+                    .faq-answer {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: start;
+                        &__content {
+                            font-feature-settings: "pnum" on, "lnum" on;
+                            font-weight: 500;
+                            font-size: 18px;
+                            line-height: 21px;
+                            color: #9097a3;
+                            transition: all 0.3s ease;
+                        }
+                        &__link {
+                            margin-top: 21px;
+                            font-feature-settings: "pnum" on, "lnum" on;
+                            font-weight: 500;
+                            font-size: 18px;
+                            line-height: 21px;
+                            color: #4598f6;
+                            transition: all 0.3s ease;
+                            display: block;
+                        }
+                    }
+                    &--active {
+                        width: 100%;
+                        max-height: 300px;
+                        transition: all 0.3s ease;
+                        .faq-question {
+                            width: 100%;
+                            margin-bottom: 22px;
+                            transition: all 0.3s ease;
+                            &__content {
+                                max-width: 694px;
+                                transition: all 0.3s ease;
+                            }
+                            .question-indicator {
+                                width: 32px;
+                                height: 32px;
+                                background-color: none;
+                                background: #4598f6;
+                                transition: all 0.3s ease;
+                                transform: rotate(45deg);
+                                .cross-one {
+                                    background-color: #fff;
+                                    transition: all 0.3s ease;
+                                }
+                                .cross-two {
+                                    background-color: #fff;
+                                    transition: all 0.3s ease;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .help-container {
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                align-items: start;
+                .faq-questionary {
+                    overflow: hidden;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: start;
+                    position: relative;
+                    padding: 32px;
+                    background: #eaf2fc;
+                    border-radius: 12px;
+                    min-height: 360px;
+                    max-width: 330px;
+                    transition: all 0.3s ease;
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                    .blue-circle {
+                        position: absolute;
+                        width: 308px;
+                        height: 234px;
+                        background: rgba(58, 114, 255, 0.5);
+                        filter: blur(120px);
+                        transform: rotate(-12.96deg);
+                        left: 244.61px;
+                        top: 137.05px;
+                    }
+                    &__image {
+                        margin-bottom: 25px;
+                    }
+                    &__header {
+                        font-feature-settings: "pnum" on, "lnum" on;
+                        font-weight: 700;
+                        font-size: 28px;
+                        line-height: 33px;
+                        color: #000000;
+                        margin-bottom: 12px;
+                    }
+                    &__subheader {
+                        font-feature-settings: "pnum" on, "lnum" on;
+                        font-weight: 500;
+                        font-size: 18px;
+                        line-height: 21px;
+                        color: #000000;
+                        margin-bottom: auto;
+                    }
+                    &__button {
+                        width: calc(100% - 48px);
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -1309,6 +1545,44 @@
                 font-size: 28px;
                 line-height: 33px;
                 margin-bottom: 32px;
+            }
+        }
+        &--now {
+            .now-subheader {
+                font-feature-settings: "pnum" on, "lnum" on;
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 23px;
+                color: #ffffff;
+                max-width: 754px;
+                margin-bottom: 48px;
+            }
+            .now-container {
+                display: flex;
+                width: 100%;
+                flex-direction: column;
+                align-items: start;
+                &__button {
+                    background-color: #fff;
+                    font-feature-settings: "pnum" on, "lnum" on;
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 19px;
+                    text-align: center;
+                    color: #000000;
+                    height: fit-content;
+                    width: calc(100% - 48px);
+                    margin-right: 0;
+                    margin-bottom: 30px;
+                }
+                &__image {
+                    transition: all 0.3s ease;
+                    width: calc(100%);
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
             }
         }
         &--help {
