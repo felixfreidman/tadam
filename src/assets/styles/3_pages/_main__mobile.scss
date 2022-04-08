@@ -164,6 +164,19 @@
         }
         &__apply {}
     }
+    .footer {
+        padding: 17px 50px;
+        width: calc(100% - 100px);
+        .footer-row {
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            &--smalled {
+                display: flex;
+                width: calc(100%);
+            }
+        }
+    }
     .main {
         .section {
             padding: 96px 50px 28px;
@@ -237,6 +250,38 @@
         }
         &__phone {
             margin-right: 20px;
+        }
+    }
+    .footer {
+        padding: 17px 50px;
+        width: calc(100% - 100px);
+        .footer-row {
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            &--smalled {
+                display: flex;
+                width: calc(100%);
+                .company-name {
+                    margin-right: 20px;
+                    font-size: 14px;
+                    line-height: 16px;
+                }
+                .company-privacy {
+                    margin-right: 20px;
+                    font-size: 14px;
+                    line-height: 16px;
+                }
+                .company-agreement {
+                    margin-right: 0;
+                    font-size: 14px;
+                    line-height: 16px;
+                }
+                .company-developer {
+                    font-size: 14px;
+                    line-height: 16px;
+                }
+            }
         }
     }
     .main {
@@ -490,6 +535,71 @@
 }
 
 @media screen and (max-width: 900px) {
+    .footer {
+        padding: 17px 25px;
+        width: calc(100% - 50px);
+        overflow-x: hidden;
+        .footer-row {
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            .logo-container {
+                width: fit-content;
+                margin-right: 50px;
+            }
+            .navigation {
+                width: fit-content;
+                margin-right: 50px;
+                &-link {
+                    font-size: 16px;
+                    line-height: 19px;
+                    margin-bottom: 16px;
+                }
+            }
+            .contacts {
+                width: fit-content;
+                .phone {
+                    font-size: 18px;
+                    line-height: 21px;
+                    margin-bottom: 16px;
+                }
+                .mail {
+                    font-size: 16px;
+                    line-height: 19px;
+                    margin-bottom: 16px;
+                }
+                .social {
+                    &-link {
+                        font-size: 16px;
+                        line-height: 19px;
+                    }
+                }
+            }
+            &--smalled {
+                display: flex;
+                width: calc(100%);
+                .company-name {
+                    margin-right: 20px;
+                    font-size: 14px;
+                    line-height: 16px;
+                }
+                .company-privacy {
+                    margin-right: 20px;
+                    font-size: 14px;
+                    line-height: 16px;
+                }
+                .company-agreement {
+                    margin-right: 0;
+                    font-size: 14px;
+                    line-height: 16px;
+                }
+                .company-developer {
+                    font-size: 14px;
+                    line-height: 16px;
+                }
+            }
+        }
+    }
     .main {
         .section {
             padding: 96px 50px 28px;
@@ -592,6 +702,81 @@
 }
 
 @media screen and (max-width: 800px) {
+    .footer {
+        padding: 17px 25px;
+        width: calc(100% - 50px);
+        overflow-x: hidden;
+        .footer-row {
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            .logo-container {
+                width: fit-content;
+                margin-right: 0px;
+                margin-bottom: 20px;
+                width: 100%;
+            }
+            .navigation {
+                width: fit-content;
+                margin-right: 50px;
+                margin-bottom: 30px;
+                &-link {
+                    font-size: 16px;
+                    line-height: 19px;
+                    margin-bottom: 16px;
+                }
+            }
+            .contacts {
+                width: fit-content;
+                .phone {
+                    font-size: 18px;
+                    line-height: 21px;
+                    margin-bottom: 16px;
+                }
+                .mail {
+                    font-size: 16px;
+                    line-height: 19px;
+                    margin-bottom: 16px;
+                }
+                .social {
+                    &-link {
+                        font-size: 16px;
+                        line-height: 19px;
+                    }
+                }
+            }
+            &--smalled {
+                display: flex;
+                flex-direction: column;
+                width: calc(100%);
+                .company-name {
+                    margin-right: 20px;
+                    font-size: 14px;
+                    line-height: 16px;
+                    margin-bottom: 20px;
+                }
+                .company-privacy {
+                    margin-right: 20px;
+                    font-size: 14px;
+                    line-height: 16px;
+                    margin-bottom: 20px;
+                }
+                .company-agreement {
+                    margin-right: 0;
+                    font-size: 14px;
+                    line-height: 16px;
+                    margin-bottom: 20px;
+                }
+                .company-developer {
+                    font-size: 14px;
+                    line-height: 16px;
+                    margin-left: 0;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
     .main {
         &--advert {
             .adverter-container {
@@ -637,6 +822,81 @@
 }
 
 @media screen and (max-width: 630px) {
+    .footer {
+        padding: 17px 25px;
+        width: calc(100% - 50px);
+        overflow-x: hidden;
+        .footer-row {
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            .logo-container {
+                width: fit-content;
+                margin-right: 0px;
+                margin-bottom: 20px;
+                width: 100%;
+            }
+            .navigation {
+                width: fit-content;
+                margin-right: 50px;
+                width: 100%;
+                &-link {
+                    font-size: 16px;
+                    line-height: 19px;
+                    margin-bottom: 16px;
+                }
+            }
+            .contacts {
+                width: fit-content;
+                .phone {
+                    font-size: 18px;
+                    line-height: 21px;
+                    margin-bottom: 16px;
+                }
+                .mail {
+                    font-size: 16px;
+                    line-height: 19px;
+                    margin-bottom: 16px;
+                }
+                .social {
+                    &-link {
+                        font-size: 16px;
+                        line-height: 19px;
+                    }
+                }
+            }
+            &--smalled {
+                display: flex;
+                flex-direction: column;
+                width: calc(100%);
+                .company-name {
+                    margin-right: 20px;
+                    font-size: 14px;
+                    line-height: 16px;
+                    margin-bottom: 20px;
+                }
+                .company-privacy {
+                    margin-right: 20px;
+                    font-size: 14px;
+                    line-height: 16px;
+                    margin-bottom: 20px;
+                }
+                .company-agreement {
+                    margin-right: 0;
+                    font-size: 14px;
+                    line-height: 16px;
+                    margin-bottom: 20px;
+                }
+                .company-developer {
+                    font-size: 14px;
+                    line-height: 16px;
+                    margin-left: 0;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
     .mobile-container--second-to-column {
         flex-direction: column;
         display: flex;
@@ -776,6 +1036,85 @@
 }
 
 @media screen and (max-width: 520px) {
+    .footer {
+        padding: 17px 25px;
+        width: calc(100% - 50px);
+        overflow-x: hidden;
+        &__apply {
+            margin-left: 0 !important;
+            margin-top: 30px;
+        }
+        .footer-row {
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            .logo-container {
+                width: fit-content;
+                margin-right: 0px;
+                margin-bottom: 20px;
+                width: 100%;
+            }
+            .navigation {
+                width: fit-content;
+                margin-right: 50px;
+                width: 100%;
+                &-link {
+                    font-size: 16px;
+                    line-height: 19px;
+                    margin-bottom: 16px;
+                }
+            }
+            .contacts {
+                width: 100%;
+                .phone {
+                    font-size: 18px;
+                    line-height: 21px;
+                    margin-bottom: 16px;
+                }
+                .mail {
+                    font-size: 16px;
+                    line-height: 19px;
+                    margin-bottom: 16px;
+                }
+                .social {
+                    &-link {
+                        font-size: 16px;
+                        line-height: 19px;
+                    }
+                }
+            }
+            &--smalled {
+                display: flex;
+                flex-direction: column;
+                width: calc(100%);
+                .company-name {
+                    margin-right: 20px;
+                    font-size: 14px;
+                    line-height: 16px;
+                    margin-bottom: 20px;
+                }
+                .company-privacy {
+                    margin-right: 20px;
+                    font-size: 14px;
+                    line-height: 16px;
+                    margin-bottom: 20px;
+                }
+                .company-agreement {
+                    margin-right: 0;
+                    font-size: 14px;
+                    line-height: 16px;
+                    margin-bottom: 20px;
+                }
+                .company-developer {
+                    font-size: 14px;
+                    line-height: 16px;
+                    margin-left: 0;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
     .mobile-menu {
         .navigation {
             &-link {
@@ -908,51 +1247,52 @@
         }
     }
 }
+
 @media screen and (max-width: 350px) {
-.main {
-    &--advert {
-        .adverter-container {
-            width: calc(100% - 20px);
-            padding: 18px 10px 120px 10px;
-            position: relative;
-            .content {
-                margin-top: 0;
-            }
-            &__image {
-                position: absolute;
-                bottom: -15px;
-                right: 25px;
-                width: 30%;
-                height: 40%;
-                img {
-                    width: 100%;
-                    height: 100%;
+    .main {
+        &--advert {
+            .adverter-container {
+                width: calc(100% - 20px);
+                padding: 18px 10px 120px 10px;
+                position: relative;
+                .content {
+                    margin-top: 0;
                 }
-            }
-            &__header {
-                font-size: 24px;
-                line-height: 29px;
-                width: 100%;
-            }
-            &__subheader {
-                font-size: 16px;
-                line-height: 19px;
-                width: 90%;
-                margin-right: 0;
-                margin-bottom: 16px;
-            }
-            &__download {
-                display: flex;
-                flex-direction: column;
-                align-items: start;
-                .download-link {
-                    max-width: 162px;
-                    max-height: 48px;
-                    background-size: contain;
-                    margin-bottom: 12px;
+                &__image {
+                    position: absolute;
+                    bottom: -15px;
+                    right: 25px;
+                    width: 30%;
+                    height: 40%;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                &__header {
+                    font-size: 24px;
+                    line-height: 29px;
+                    width: 100%;
+                }
+                &__subheader {
+                    font-size: 16px;
+                    line-height: 19px;
+                    width: 90%;
+                    margin-right: 0;
+                    margin-bottom: 16px;
+                }
+                &__download {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: start;
+                    .download-link {
+                        max-width: 162px;
+                        max-height: 48px;
+                        background-size: contain;
+                        margin-bottom: 12px;
+                    }
                 }
             }
         }
     }
-}
 }
