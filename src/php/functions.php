@@ -59,15 +59,13 @@ function ajax_form()
 {
     $name = $_REQUEST['name'];
     $phone = $_REQUEST['phone'];
-    $company = $_REQUEST['company'];
-    $area = $_REQUEST['area'];
+    $mail = $_REQUEST['mail'];
     $response = '';
     $thm = 'Заявка на демо-доступ';
     $thm = "=?utf-8?b?" . base64_encode($thm) . "?=";
     $msg = "Имя: " . $name . "<br />
     Телефон: " . $phone . "<br />
-    Название компании: " . $company . "<br />
-    Область деятельности: " . $area . "<br />";
+    Почта: " . $mail . "<br />";
     $mail_to = get_field("email_to", 'option');
 
     $headers = "Content-Type: text/html; charset=utf-8\n";
@@ -79,7 +77,7 @@ function ajax_form()
         $response = '<div class="applied-screen" id="appliedForm">
 <div class="form-close" id="closeAppliedForm"><span class="cross-one"> </span><span class="cross-two"></span>
 </div><img class="applied-icon"
-    src="http://localhost:8888/wp-content/themes/Tadam/assets/images/content/main__applied.svg"
+    src="https://tadam.yurin.biz/wp-content/themes/tadam/assets/images/content/main__applied.svg"
 alt="Form Applied">
 <div class="applied-header">Спасибо за заявку</div>
 <div class="applied-subheader">Менеджер свяжется с вами в ближайшее время</div>
