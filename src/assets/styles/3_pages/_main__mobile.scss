@@ -320,6 +320,22 @@
                 }
             }
         }
+        &--ability {
+            .ability-container {
+                &__card {
+                    margin-right: 30px;
+                    width: 344px;
+                    &:hover {
+                        .card-image {
+                            transform: scale(1);
+                        }
+                    }
+                    .card-image {}
+                    .card-header {}
+                    .card-content {}
+                }
+            }
+        }
     }
 }
 
@@ -531,6 +547,28 @@
                 }
             }
         }
+        &--ability {
+            .ability-container {
+                &__card {
+                    margin-right: 30px;
+                    width: 33%;
+                    &:hover {
+                        .card-image {
+                            transform: scale(1);
+                        }
+                    }
+                    .card-image {}
+                    .card-header {
+                        font-size: 18px;
+                        line-height: 21px;
+                    }
+                    .card-content {
+                        font-size: 16px;
+                        line-height: 19px;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -698,6 +736,42 @@
                 }
             }
         }
+        &--ability {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            position: relative;
+            .ability-container {
+                flex-wrap: wrap;
+                margin-bottom: 0;
+                &__card {
+                    margin-right: 30px;
+                    width: 45%;
+                    margin-bottom: 30px;
+                    height: 200px;
+                    &:hover {
+                        .card-image {
+                            transform: scale(1);
+                        }
+                    }
+                    .card-image {}
+                    .card-header {
+                        font-size: 18px;
+                        line-height: 21px;
+                    }
+                    .card-content {
+                        font-size: 16px;
+                        line-height: 19px;
+                    }
+                }
+                .positionedAbs {
+                    position: absolute;
+                    right: calc(5% - 20px);
+                    top: calc(50% - 24px);
+
+                }
+            }
+        }
     }
 }
 
@@ -815,6 +889,40 @@
                     .download-link {
                         margin-bottom: 12px;
                     }
+                }
+            }
+        }
+        &--ability {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            position: relative;
+            .ability-container {
+                flex-wrap: wrap;
+                margin-bottom: 0;
+                &__card {
+                    margin-right: 30px;
+                    width: 100%;
+                    margin-bottom: 30px;
+                    height: 200px;
+                    &:hover {
+                        .card-image {
+                            transform: scale(1);
+                        }
+                    }
+                    .card-image {}
+                    .card-header {
+                        font-size: 18px;
+                        line-height: 21px;
+                    }
+                    .card-content {
+                        font-size: 16px;
+                        line-height: 19px;
+                    }
+                }
+                .positionedAbs {
+                    position: static
+
                 }
             }
         }
