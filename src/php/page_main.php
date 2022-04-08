@@ -1,275 +1,226 @@
 <?php /* Template Name: Main Page */?>
 <?php get_header()?>
+<?php
+// Объявляю сразу все важные поля
+$main_header = get_field('main_header');
+$advert_header = get_field('advert_header');
+$advert_content = get_field('advert_content');
+$advert_image = get_field('advert_image');
+$ability_header = get_field('ability_header');
+$every_header = get_field('every_header');
+$level_header = get_field('level_header');
+$now_header = get_field('now_header');
+$now_content = get_field('now_content');
+$now_image = get_field('now_image');
+$question_image = get_field('question_image');
+$question_header = get_field('question_header');
+$question_content = get_field('question_content');
+$apply_text = get_field('apply_text');
+$stats_main_header = get_field('stats_main_header');
+
+?>
 <main class="main">
     <section class="section main--greeting">
         <div class="blue-circle blue-circle--left"> </div>
         <div class="blue-circle blue-circle--right"> </div>
         <div class="section-container">
             <div class="greeting-container">
-                <div class="greeting-header">Реклама вашего мероприятия</div>
+                <div class="greeting-header"><?=$main_header?></div>
                 <div class="greeting-subheader"> Управляйте рекламой без рутины и лишних расходов<span> Уже </span><a
                         class="greeting-subheader__link" href="#">более 1 000 активных пользователей</a> в Москве</div>
-                <div class="greeting-button apply-btn">Попробовать</div>
+                <div class="greeting-button apply-btn"><?=$apply_text?></div>
             </div>
-            <div class="greeting-image"> <img src="./assets/images/content/main__greeting.svg" alt="Main Greeting">
+            <div class="greeting-image"> <img
+                    src=<?php echo get_template_directory_uri() . '/assets/images/content/main__greeting.svg' ?>
+                    alt="Main Greeting">
             </div>
         </div>
         <div class="stats-container">
-            <div class="stats-container__header">Исходя из статистики рекламодателей Tadam</div>
+            <div class="stats-container__header"><?=$stats_main_header?></div>
+
             <div class="stats-container__cards">
+                <?php
+if (have_rows('stats_repeater')):
+
+    while (have_rows('stats_repeater')): the_row();?>
+
+                <?php
+        $stats_image = get_sub_field('stats_image');
+        $stats_header = get_sub_field('stats_header');
+        $stats_content = get_sub_field('stats_content');
+        ?>
                 <div class="stats-container__card">
-                    <div class="card-image"> <img src="./assets/images/content/main__stats1.svg" alt=""></div>
-                    <div class="card-header">520 ₽ </div>
-                    <div class="card-content">Средняя стоимость привлечения клиента</div>
+                    <div class="card-image"> <img src="<?=$stats_image?>" alt=""></div>
+                    <div class="card-header"><?=$stats_header?></div>
+                    <div class="card-content"><?=$stats_content?></div>
                 </div>
-                <div class="stats-container__card">
-                    <div class="card-image"> <img src="./assets/images/content/main__stats2.svg" alt=""></div>
-                    <div class="card-header">6 часов</div>
-                    <div class="card-content">До получения первых клиентов</div>
-                </div>
-                <div class="stats-container__card">
-                    <div class="card-image"> <img src="./assets/images/content/main__stats3.svg" alt=""></div>
-                    <div class="card-header">до 1 000 новых клиентов </div>
-                    <div class="card-content">На мероприятие любой тематики</div>
-                </div>
+
+                <?php
+    endwhile;
+endif;
+?>
             </div>
         </div>
     </section>
     <section class="section main--advert" id="toAbout">
         <div class="adverter-container">
             <div class="content">
-                <div class="adverter-container__header">Tadam — социальная сеть о развлечениях</div>
-                <div class="adverter-container__subheader">Мы — развлекательный навигатор нового поколения, который
-                    первым оперативно сообщает и продвигает события и мероприятия, которые нельзя пропустить</div>
+                <div class="adverter-container__header"><?=$advert_header?></div>
+                <div class="adverter-container__subheader"><?=$advert_content?></div>
                 <div class="adverter-container__download">
-                    <a class="download-link download-link--google" href="#"> </a>
-                    <a class="download-link download-link--apple" href="#"></a>
+                    <?php
+$apple_link = get_field('link_apple');
+$google_link = get_field('link_google');
+
+?>
+                    <a class="download-link download-link--google" href="<?=$apple_link?>"> </a>
+                    <a class="download-link download-link--apple" href="<?=$google_link?>"></a>
                 </div>
             </div>
-            <div class="adverter-container__image"> <img src="./assets/images/content/main_advert__phone.svg"
-                    alt="Advert Image"></div>
+            <div class="adverter-container__image"> <img src="<?=$advert_image?>" alt="Advert Image"></div>
         </div>
     </section>
     <section class="section main--ability" id="toAbilities">
-        <div class="section-header">Tadam поможет</div>
+        <div class="section-header"><?=$ability_header?></div>
+        <?php
+if (have_rows('ability_row')):
+
+    while (have_rows('ability_row')): the_row();
+        ?>
         <div class="ability-container">
+
+            <?php if (have_rows('ability_repeater')):
+
+            while (have_rows('ability_repeater')): the_row();?>
+
+
+            <?php
+                $ability_image = get_sub_field('ability_image');
+                $ability_header = get_sub_field('ability_header');
+                $ability_content = get_sub_field('ability_content');
+                ?>
             <div class="ability-container__card">
-                <div class="card-image"><img src="./assets/images/content/main__ability1.svg" alt="Ability 1"></div>
-                <div class="card-header">Управлять трафиком</div>
-                <div class="card-content">В нашем приложении тысячи пользователей, которые постоянно ищут интересные
-                    мероприятия и локации и хотят разнообразить свой досуг</div>
+                <div class="card-image"><img src="<?=$ability_image?>" alt="Ability"></div>
+                <div class="card-header"><?=$ability_header?></div>
+                <div class="card-content"><?=$ability_content?></div>
             </div>
-            <div class="ability-container__card">
-                <div class="card-image"><img src="./assets/images/content/main__ability2.svg" alt="Ability 2"></div>
-                <div class="card-header">Работать с узнаваемостью </div>
-                <div class="card-content">Весь город узнает о вашем заведении или событии, сотни людей захотят его
-                    посетить</div>
-            </div>
-            <div class="ability-container__card">
-                <div class="card-image"><img src="./assets/images/content/main__ability3.svg" alt="Ability 3"></div>
-                <div class="card-header">С пиаром Вашего событиям</div>
-                <div class="card-content">Чем больше людей узнает о вашем событии, тем больше своих друзей и знакомых
-                    они пригласят!</div>
-            </div>
+
+            <?php
+            endwhile;
+        endif;?>
         </div>
-        <div class="ability-container">
-            <div class="ability-container__card">
-                <div class="card-image"><img src="./assets/images/content/main__ability4.svg" alt="Ability 4"></div>
-                <div class="card-header">Собирать контакты и заявки</div>
-                <div class="card-content">Максимально удобно собирать заявки в одном сервисе. А вашим пользователям тоже
-                    будет удобно пройти простую понятную регистрацию.</div>
-            </div>
-            <div class="ability-container__card">
-                <div class="card-image"><img src="./assets/images/content/main__ability5.svg" alt="Ability 5"></div>
-                <div class="card-header">Собирать обратную связь</div>
-                <div class="card-content">В Tadam вам будут доступны контакты людей, которые зарегистрировались на ваше
-                    событие. А также чат события, где будут видны честные комментарии участников.</div>
-            </div>
-            <div class="ability-container__card positionedAbs">
-                <div class="card-image"><img src="./assets/images/content/main__ability6.svg" alt="Ability 6"></div>
-                <div class="card-header">Сформировать лояльность</div>
-                <div class="card-content">Аудитория доверяет проверенным организаторам. В Tadam пользователям будет
-                    видно историю ваших событий и отзывы о прошедших мероприятий.</div>
-            </div>
-        </div>
+        <?php
+    endwhile;
+endif;
+?>
     </section>
     <section class="section main--everybody" id="toProcess">
-        <div class="section-header">Рекламу может настроить каждый</div>
-        <div class="everybody-container everybody-container--blue">
+        <div class="section-header"><?=$every_header?></div>
+        <?php if (have_rows('every_repeater')):
+
+    while (have_rows('every_repeater')): the_row();?>
+
+        <?php
+        $every_image = get_sub_field('every_image');
+        $every_header = get_sub_field('every_header');
+        $every_content = get_sub_field('every_content');
+        $every_color = get_sub_field('every_color');
+        $every_number = get_sub_field('every_number');
+        ?>
+        <div class="everybody-container everybody-container--<?=$every_color?>">
             <div class="everybody-container__box">
-                <div class="everybody-container__counter">01</div>
-                <div class="everybody-container__header">Зайдите в рекламный кабинет с помощью компьютера или телефона
+                <div class="everybody-container__counter"><?=$every_number?></div>
+                <div class="everybody-container__header"><?=$every_header?>
                 </div>
                 <div class="everybody-container__content">
-                    <div class="everybody-container__subheader">Простая авторизация с помощью номера телефона</div>
-                    <div class="everybody-container__paragraph">Если у вас есть аккаунт в приложении Tadam, то не нужно
-                        создавать новый, просто зайдите с помощью предыдущих настроек</div>
+                    <div class="everybody-container__paragraph"><?=$every_content?></div>
                 </div>
             </div>
-            <div class="everybody-container__image"> <img src="./assets/images/content/main__everybody1.svg"
-                    alt="Main Evetybody 1"></div>
+            <div class="everybody-container__image"> <img src="<?=$every_image?>" alt="Main Evetybody 1"></div>
         </div>
-        <div class="everybody-container everybody-container--yellow">
-            <div class="everybody-container__box">
-                <div class="everybody-container__counter">02</div>
-                <div class="everybody-container__header">Заполните данные о себе или вашей компании</div>
-                <div class="everybody-container__content">
-                    <div class="everybody-container__subheader">Зарегистрируйтесь как физическое лицо или компания</div>
-                    <div class="everybody-container__paragraph">Расскажите о себе или вашей компании<br>Дайте доступ
-                        вашим сотрудникам для совместного пользования рекламным кабентомновый, просто зайдите с помощью
-                        предыдущих настроек</div>
-                </div>
-            </div>
-            <div class="everybody-container__image"> <img src="./assets/images/content/main__everybody2.svg"
-                    alt="Main Evetybody 2"></div>
-        </div>
-        <div class="everybody-container everybody-container--green">
-            <div class="everybody-container__box">
-                <div class="everybody-container__counter">03</div>
-                <div class="everybody-container__header">Создайте карточку события и запустите рекламную кампанию</div>
-                <div class="everybody-container__content">
-                    <div class="everybody-container__subheader">Прикрепите событие к рекламной кампании и выберете
-                        настройки показа:</div>
-                    <ul class="everybody-container__list">
-                        <li class="everybody-container__list-item">Пол</li>
-                        <li class="everybody-container__list-item">Возраст</li>
-                        <li class="everybody-container__list-item">Интересы</li>
-                        <li class="everybody-container__list-item">Географию показа </li>
-                        <li class="everybody-container__list-item">и пр.</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="everybody-container__image"> <img src="./assets/images/content/main__everybody3.svg"
-                    alt="Main Evetybody 3"></div>
-        </div>
+
+        <?php
+    endwhile;
+endif;
+?>
     </section>
     <section class="section main--level">
-        <div class="section-header">Реклама для бизнеса любого уровня</div>
+        <div class="section-header"><?=$level_header?></div>
         <div class="level-container">
-            <div class="level-container__card">
-                <div class="card-image" style="background: url(./assets/images/content/main__level1.svg)" alt="Level 1">
+            
+            <?php if (have_rows('level_repeater')):
+
+while (have_rows('level_repeater')): the_row();?>
+
+    <?php
+    $level_image = get_sub_field('level_image');
+    $level_header = get_sub_field('level_header');
+    $level_content = get_sub_field('level_content');
+    ?>
+    <div class="level-container__card">
+                <div class="card-image"
+                    style="background: url(<?=$level_image?>)"
+                    alt="Level">
                 </div>
                 <div class="card-content">
-                    <div class="card-content__header">Для небольших вечеринок</div>
-                    <div class="card-content__content">Организуйте крутую вечеринку, пригласив на нее своих будущих
-                        новых друзей</div>
+                    <div class="card-content__header"><?=$level_header?></div>
+                    <div class="card-content__content"><?=$level_content?></div>
                 </div>
             </div>
-            <div class="level-container__card">
-                <div class="card-image" style="background: url(./assets/images/content/main__level2.svg)" alt="Level 2">
-                </div>
-                <div class="card-content">
-                    <div class="card-content__header">Для рок-группы и камерного оркестра</div>
-                    <div class="card-content__content">Проведите музыкальный концерт своей группы, собрав отзывчивую
-                        аудиторию</div>
-                </div>
-            </div>
-            <div class="level-container__card">
-                <div class="card-image" style="background: url(./assets/images/content/main__level3.svg)" alt="Level 3">
-                </div>
-                <div class="card-content">
-                    <div class="card-content__header">Для профессиональных агентств организации мероприятий</div>
-                    <div class="card-content__content">Соберите крупное мероприятие более чем на 250 человек</div>
-                </div>
-            </div>
+
+    <?php
+endwhile;
+endif?>
         </div>
     </section>
     <section class="section main--now">
-        <div class="now-header">Начните рекламировать свое мероприятие прямо сейчас!</div>
-        <div class="now-subheader">Заполните форму и получите демо-доступ к рекламному кабинету Tadam</div>
+        <div class="now-header"><?=$now_header?></div>
+        <div class="now-subheader"><?=$now_content?></div>
         <div class="now-container">
-            <div class="now-container__button apply-btn">Попробовать</div>
-            <div class="now-container__image"> <img src="./assets/images/content/main__now.svg" alt="Now 1"></div>
+            <div class="now-container__button apply-btn"><?=$apply_text?></div>
+            <div class="now-container__image"> <img
+                    src="<?=$now_image?>" alt="Now">
+            </div>
         </div>
     </section>
     <section class="section main--help" id="toHelp">
         <div class="section-header">Часто задаваемые вопросы</div>
         <div class="help-container">
             <div class="faq-container">
+                <?php
+if (have_rows('faq_repeater')):
+
+    while (have_rows('faq_repeater')): the_row();?>
+
+                <?php
+        $faq_question = get_sub_field('faq_question');
+        $faq_answer = get_sub_field('faq_answer');
+        $faq_link = get_sub_field('faq_link');
+        ?>
                 <div class="faq-block">
                     <div class="faq-question">
-                        <div class="faq-question__content">Окей, а кто сидит в Tadam</div>
+                        <div class="faq-question__content"><?=$faq_question?></div>
                         <div class="question-indicator"> <span class="cross-one"> </span><span class="cross-two"></span>
                         </div>
                     </div>
                     <div class="faq-answer">
-                        <div class="faq-answer__content">Наша аудитория — это молодая и активная часть Москвы! Это парни
-                            и девушки от 18 в среднем до 35 лет. Они привыкли посещать новые места и открывать для себя
-                            интересные события, охотно рассказывать об этом друзьям и делиться
-                            впечатлениями. В тоже время они всегда рады вернуться в любимое заведение, чтобы насладиться
-                            знакомой и приятной атмосферой.</div><a class="faq-answer__link" href="#">Подробнее об
-                            аудитории</a>
+                        <div class="faq-answer__content"><?=$faq_answer?></div><a class="faq-answer__link"
+                            href="<?=$faq_link?>">Подробнее</a>
                     </div>
                 </div>
-                <div class="faq-block">
-                    <div class="faq-question">
-                        <div class="faq-question__content">Сколько человек зарегистрируется на мое мероприятие?</div>
-                        <div class="question-indicator"> <span class="cross-one"> </span><span class="cross-two"></span>
-                        </div>
-                    </div>
-                    <div class="faq-answer">
-                        <div class="faq-answer__content">Наша аудитория — это молодая и активная часть Москвы! Это парни
-                            и девушки от 18 в среднем до 35 лет. Они привыкли посещать новые места и открывать для себя
-                            интересные события, охотно рассказывать об этом друзьям и делиться
-                            впечатлениями. В тоже время они всегда рады вернуться в любимое заведение, чтобы насладиться
-                            знакомой и приятной атмосферой.</div><a class="faq-answer__link" href="#">Подробнее об
-                            аудитории</a>
-                    </div>
-                </div>
-                <div class="faq-block">
-                    <div class="faq-question">
-                        <div class="faq-question__content">Что нельзя публиковать?</div>
-                        <div class="question-indicator"> <span class="cross-one"> </span><span class="cross-two"></span>
-                        </div>
-                    </div>
-                    <div class="faq-answer">
-                        <div class="faq-answer__content">Наша аудитория — это молодая и активная часть Москвы! Это парни
-                            и девушки от 18 в среднем до 35 лет. Они привыкли посещать новые места и открывать для себя
-                            интересные события, охотно рассказывать об этом друзьям и делиться
-                            впечатлениями. В тоже время они всегда рады вернуться в любимое заведение, чтобы насладиться
-                            знакомой и приятной атмосферой.</div><a class="faq-answer__link" href="#">Подробнее об
-                            аудитории</a>
-                    </div>
-                </div>
-                <div class="faq-block">
-                    <div class="faq-question">
-                        <div class="faq-question__content">Как аудитория находит Tadam?</div>
-                        <div class="question-indicator"> <span class="cross-one"> </span><span class="cross-two"></span>
-                        </div>
-                    </div>
-                    <div class="faq-answer">
-                        <div class="faq-answer__content">Наша аудитория — это молодая и активная часть Москвы! Это парни
-                            и девушки от 18 в среднем до 35 лет. Они привыкли посещать новые места и открывать для себя
-                            интересные события, охотно рассказывать об этом друзьям и делиться
-                            впечатлениями. В тоже время они всегда рады вернуться в любимое заведение, чтобы насладиться
-                            знакомой и приятной атмосферой.</div><a class="faq-answer__link" href="#">Подробнее об
-                            аудитории</a>
-                    </div>
-                </div>
-                <div class="faq-block">
-                    <div class="faq-question">
-                        <div class="faq-question__content">Вижу ошибки в рекламном кабинете. Что делать?</div>
-                        <div class="question-indicator"> <span class="cross-one"> </span><span class="cross-two"></span>
-                        </div>
-                    </div>
-                    <div class="faq-answer">
-                        <div class="faq-answer__content">Наша аудитория — это молодая и активная часть Москвы! Это парни
-                            и девушки от 18 в среднем до 35 лет. Они привыкли посещать новые места и открывать для себя
-                            интересные события, охотно рассказывать об этом друзьям и делиться
-                            впечатлениями. В тоже время они всегда рады вернуться в любимое заведение, чтобы насладиться
-                            знакомой и приятной атмосферой.</div><a class="faq-answer__link" href="#">Подробнее об
-                            аудитории</a>
-                    </div>
-                </div>
+                <?php
+    endwhile;
+endif;
+?>
             </div>
             <div class="faq-questionary">
                 <div class="blue-circle"> </div>
-                <div class="faq-questionary__image"> <img src="./assets/images/content/main__question.svg"
+                <div class="faq-questionary__image"> <img
+                        src="<?=$question_image?>"
                         alt="Question Logo"></div>
-                <div class="faq-questionary__header">Остались вопросы?</div>
-                <div class="faq-questionary__subheader">Оставьте заявку и наш менеджер свяжется с вами чтобы ответить на
-                    все вопросы</div>
-                <div class="faq-questionary__button apply-btn">Оставить заявку </div>
+                <div class="faq-questionary__header"><?=$question_header?></div>
+                <div class="faq-questionary__subheader"><?=$question_content?></div>
+                <div class="faq-questionary__button apply-btn">Оставить заявку</div>
             </div>
         </div>
     </section>
