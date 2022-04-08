@@ -313,6 +313,67 @@
                 }
             }
         }
+        &--level {
+            padding-bottom: 96px !important;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            background: #f2f3f5;
+            .level-container {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                &__card {
+                    max-width: auto;
+                    width: 33%;
+                    max-height: 480px;
+                    height: 480px;
+                    margin-right: 24px;
+                    background: #ffffff;
+                    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.02);
+                    border-radius: 12px;
+                    transition: all 0.3s ease;
+                    &:last-child {
+                        margin-right: 0px;
+                    }
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                    .card-image {
+                        max-height: 50%;
+                        height: 50%;
+                        width: 100%;
+                        border-radius: 12px 12px 0 0;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                    }
+                    .card-content {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        justify-content: flex-start;
+                        padding: 24px;
+                        width: calc(100% - 48px);
+                        height: calc(50% - 48px);
+                        &__header {
+                            font-feature-settings: "pnum" on, "lnum" on;
+                            font-weight: 700;
+                            font-size: 18px;
+                            line-height: 21px;
+                            color: #000000;
+                        }
+                        &__content {
+                            font-feature-settings: "pnum" on, "lnum" on;
+                            font-weight: 500;
+                            font-size: 16px;
+                            line-height: 19px;
+                            color: #9097a3;
+                            margin-top: 12px;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -931,6 +992,71 @@
                 }
             }
         }
+        &--level {
+            padding-bottom: 96px !important;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            background: #f2f3f5;
+            .level-container {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: space-between;
+                width: 100%;
+                &__card {
+                    max-width: 100%;
+                    width: 100%;
+                    max-height: 360px;
+                    height: 360px;
+                    margin-right: 0;
+                    background: #ffffff;
+                    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.02);
+                    border-radius: 12px;
+                    transition: all 0.3s ease;
+                    margin-bottom: 30px;
+                    &:last-child {
+                        margin-right: 0px;
+                    }
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                    .card-image {
+                        max-height: 50%;
+                        height: 50%;
+                        width: 100%;
+                        border-radius: 12px 12px 0 0;
+                        background-repeat: no-repeat !important;
+                        background-size: cover !important;
+                        background-position: center;
+                    }
+                    .card-content {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        justify-content: flex-start;
+                        padding: 24px;
+                        width: calc(100% - 48px);
+                        height: calc(50% - 48px);
+                        &__header {
+                            font-feature-settings: "pnum" on, "lnum" on;
+                            font-weight: 700;
+                            font-size: 18px;
+                            line-height: 21px;
+                            color: #000000;
+                        }
+                        &__content {
+                            font-feature-settings: "pnum" on, "lnum" on;
+                            font-weight: 500;
+                            font-size: 16px;
+                            line-height: 19px;
+                            color: #9097a3;
+                            margin-top: 12px;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -1091,6 +1217,9 @@
             .section-header {
                 width: 100%;
                 max-width: 100%;
+                font-size: 28px;
+                line-height: 33px;
+                margin-bottom: 32px;
             }
             .everybody-container {
                 display: flex;
@@ -1162,6 +1291,33 @@
                     transition: all 0.3s ease;
                     width: 45%;
                 }
+            }
+        }
+        &--level {
+            .section-header {
+                width: 100%;
+                max-width: 100%;
+                font-size: 28px;
+                line-height: 33px;
+                margin-bottom: 32px;
+            }
+        }
+        &--now {
+            .now-header {
+                width: 100%;
+                max-width: 100%;
+                font-size: 28px;
+                line-height: 33px;
+                margin-bottom: 32px;
+            }
+        }
+        &--help {
+            .section-header {
+                width: 100%;
+                max-width: 100%;
+                font-size: 28px;
+                line-height: 33px;
+                margin-bottom: 32px;
             }
         }
     }
@@ -1849,6 +2005,71 @@
                     img {
                         width: 100%;
                         height: 100%;
+                    }
+                }
+            }
+        }
+        &--level {
+            padding-bottom: 40px !important;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            background: #f2f3f5;
+            .level-container {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: space-between;
+                width: 100%;
+                &__card {
+                    max-width: 100%;
+                    width: 100%;
+                    max-height: 360px;
+                    height: 360px;
+                    margin-right: 0;
+                    background: #ffffff;
+                    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.02);
+                    border-radius: 12px;
+                    transition: all 0.3s ease;
+                    margin-bottom: 30px;
+                    &:last-child {
+                        margin-right: 0px;
+                    }
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                    .card-image {
+                        max-height: 50%;
+                        height: 50%;
+                        width: 100%;
+                        border-radius: 12px 12px 0 0;
+                        background-repeat: no-repeat !important;
+                        background-size: cover !important;
+                        background-position: center;
+                    }
+                    .card-content {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        justify-content: flex-start;
+                        padding: 24px;
+                        width: calc(100% - 48px);
+                        height: calc(50% - 48px);
+                        &__header {
+                            font-feature-settings: "pnum" on, "lnum" on;
+                            font-weight: 700;
+                            font-size: 18px;
+                            line-height: 21px;
+                            color: #000000;
+                        }
+                        &__content {
+                            font-feature-settings: "pnum" on, "lnum" on;
+                            font-weight: 500;
+                            font-size: 16px;
+                            line-height: 19px;
+                            color: #9097a3;
+                            margin-top: 12px;
+                        }
                     }
                 }
             }
