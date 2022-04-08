@@ -1,30 +1,47 @@
+let windowLocation = window.location.href;
+console.log(windowLocation);
+if (!windowLocation.includes("privacy")) {
+  const allQuestions = document.querySelectorAll(".faq-block");
+  allQuestions.forEach((question) => {
+    question.addEventListener("click", () => {
+      question.classList.toggle("faq-block--active");
+    });
+  });
 
-//   $('#btn-menu-mob').click(function(e) {
-//       e.preventDefault();
-//       $('.header__svg-mob').addClass('is-active');
+  const darkLayer = document.querySelector(".dark-layer");
+  const applyBtns = document.querySelectorAll(".apply-btn");
+  const closeForm = document.getElementById("closeForm");
+  const applyFormScreen = document.getElementById("applyForm");
+  const burgerMenu = document.querySelector(".mobile-header__burger-menu");
+  const mobileMenu = document.querySelector(".mobile-menu");
+  const mobileNavigation = document.getElementById("mobileNavigation");
+  const allLinks = mobileNavigation.querySelectorAll(".navigation-link");
 
-//       $('#menu-mobile').animate({ 
-//         right: '0px' 
-//         }, 300);
-//       $('#menu-mobile').animate({ 
-//         right: '0px' 
-//         }, 300);
-//     $('body').css('overflow', 'hidden');
-//     $('.page').animate({ 
-//         right: '190px' 
-//     }, 200); 
-// });
+  applyBtns.forEach((button) => {
+    button.addEventListener("click", () => {
+      darkLayer.classList.toggle("js--hidden");
+    });
+  });
 
-// $('.menu-mobile__svg-close').click(function(e) {
-//     e.preventDefault();
-//     $('.header__svg-mob').removeClass('is-active');
-//     $('#menu-mobile').animate({ 
-//       right: '-207px' 
-//   }, 300);
-//   $('body').css('overflow', 'auto');
-//   $('.page').animate({ 
-//       right: '0px' 
-//   }, 200); 
-// });
+  closeForm.addEventListener("click", () => {
+    darkLayer.classList.toggle("js--hidden");
+  });
 
- 
+  burgerMenu.addEventListener("click", () => {
+    burgerMenu.classList.toggle("mobile-header__burger-menu--active");
+    mobileMenu.classList.toggle("mobile-menu--active");
+    document.querySelector("body").classList.toggle("disable-body");
+  });
+
+  allLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      burgerMenu.classList.toggle("mobile-header__burger-menu--active");
+      mobileMenu.classList.toggle("mobile-menu--active");
+      document.querySelector("body").classList.toggle("disable-body");
+    });
+  });
+
+  $(document).ready(function () {
+    $("#userPhone").inputmask();
+  });
+}

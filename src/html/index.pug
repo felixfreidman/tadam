@@ -1,0 +1,285 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="./style.min.css")
+        link(rel="shortcut icon", href="./assets/images/content/favicon.png", type="image/x-icon")
+        title Tadam
+    body 
+        header.header
+            .header__logo-container
+                    .logo 
+                        a(href="./index.html") 
+                            img(src="./assets/images/content/logo.svg", alt="Company Logo")
+                    .logo-caption Tadam
+            nav.header__navigation
+                a.navigation-link(href="#toAbout") О проекте
+                a.navigation-link(href="#toProcess") Как работает
+                a.navigation-link(href="#toAbilities") Возможности
+                a.navigation-link(href="#toHelp") FAQ
+            .header__phone 
+                a(href="tel:+79991235476") +7 999 123 54 76 
+            .header__apply.apply-btn Попробовать
+        .mobile-header
+            .logo-container
+                a(href="#toMain") 
+                    img.logo#toMain(src="./assets/images/content/logo.svg" alt="Company Logo")
+                span.logo-caption Tadam
+            .mobile-header__burger-menu
+                span.cross-one--mobile 
+                span.cross-two--mobile
+                span.cross-left
+        .mobile-menu
+            .navigation#mobileNavigation
+                a.navigation-link(href="#toGreeting") О системе
+                a.navigation-link(href="#toProcess") Как работает
+                a.navigation-link(href="toAbilities") Возможности
+                a.navigation-link(href="#toHelp") Помощь
+        
+            .contacts
+                a(href="tel:++79991235476") +7 999 123 54 76
+            .apply
+                .apply-btn#headerApply Попробовать
+        main.main
+            section.section.main--greeting 
+                .blue-circle.blue-circle--left 
+                .blue-circle.blue-circle--right  
+                .section-container 
+                    .greeting-container 
+                        .greeting-header Реклама вашего мероприятия
+                        .greeting-subheader 
+                            | Управляйте рекламой без рутины и лишних расходов
+                            span  Уже 
+                            a(href="#").greeting-subheader__link более 1 000 активных пользователей
+                            |  в Москве
+                        .greeting-button.apply-btn Попробовать
+                    .greeting-image 
+                        img(src="./assets/images/content/main__greeting.svg", alt="Main Greeting")
+                .stats-container 
+                    .stats-container__header Исходя из статистики рекламодателей Tadam
+                    .stats-container__cards
+                        .stats-container__card 
+                            .card-image 
+                                img(src="./assets/images/content/main__stats1.svg", alt="")
+                            .card-header 520 ₽ 
+                            .card-content Средняя стоимость привлечения клиента
+                        .stats-container__card 
+                            .card-image 
+                                img(src="./assets/images/content/main__stats2.svg", alt="")
+                            .card-header 6 часов
+                            .card-content До получения первых клиентов
+                        .stats-container__card 
+                            .card-image 
+                                img(src="./assets/images/content/main__stats3.svg", alt="")
+                            .card-header до 1 000 новых клиентов 
+                            .card-content На мероприятие любой тематики
+            section.section.main--advert#toAbout 
+                .adverter-container
+                    .content 
+                        .adverter-container__header Tadam — социальная сеть о развлечениях
+                        .adverter-container__subheader Мы — развлекательный навигатор нового поколения, который первым оперативно сообщает и продвигает события и мероприятия, которые нельзя пропустить
+                        .adverter-container__download 
+                            a(href="#").download-link.download-link--google 
+                            a(href="#").download-link.download-link--apple
+                    .adverter-container__image 
+                        img(src="./assets/images/content/main_advert__phone.svg", alt="Advert Image")
+            section.section.main--ability#toAbilities
+                .section-header Tadam поможет
+                .ability-container 
+                    .ability-container__card 
+                        .card-image
+                            img(src="./assets/images/content/main__ability1.svg", alt="Ability 1")
+                        .card-header Управлять трафиком
+                        .card-content В нашем приложении тысячи пользователей, которые постоянно ищут интересные мероприятия и локации и хотят разнообразить свой досуг
+                    .ability-container__card 
+                        .card-image
+                            img(src="./assets/images/content/main__ability2.svg", alt="Ability 2")
+                        .card-header Работать с узнаваемостью 
+                        .card-content Весь город узнает о вашем заведении или событии, сотни людей захотят его посетить
+                    .ability-container__card 
+                        .card-image
+                            img(src="./assets/images/content/main__ability3.svg", alt="Ability 3")
+                        .card-header С пиаром Вашего событиям
+                        .card-content Чем больше людей узнает о вашем событии, тем больше своих друзей и знакомых они пригласят!
+                .ability-container 
+                    .ability-container__card 
+                        .card-image
+                            img(src="./assets/images/content/main__ability4.svg", alt="Ability 4")
+                        .card-header Собирать контакты и заявки
+                        .card-content Максимально удобно собирать заявки в одном сервисе. А вашим пользователям тоже будет удобно пройти простую понятную регистрацию.
+                    .ability-container__card 
+                        .card-image
+                            img(src="./assets/images/content/main__ability5.svg", alt="Ability 5")
+                        .card-header Собирать обратную связь
+                        .card-content В Tadam вам будут доступны контакты людей, которые зарегистрировались на ваше событие. А также чат события, где будут видны честные комментарии участников.
+                    .ability-container__card.positionedAbs 
+                        .card-image
+                            img(src="./assets/images/content/main__ability6.svg", alt="Ability 6")
+                        .card-header Сформировать лояльность
+                        .card-content Аудитория доверяет проверенным организаторам. В Tadam пользователям будет видно историю ваших событий и отзывы о прошедших мероприятий.
+            section.section.main--everybody#toProcess
+                .section-header Рекламу может настроить каждый
+                .everybody-container.everybody-container--blue
+                    .everybody-container__box
+                        .everybody-container__counter 01
+                        .everybody-container__header Зайдите в рекламный кабинет с помощью компьютера или телефона
+                        .everybody-container__content 
+                            .everybody-container__subheader Простая авторизация с помощью номера телефона
+                            .everybody-container__paragraph Если у вас есть аккаунт в приложении Tadam, то не нужно создавать новый, просто зайдите с помощью предыдущих настроек
+                    .everybody-container__image 
+                        img(src="./assets/images/content/main__everybody1.svg", alt="Main Evetybody 1")
+                    
+                .everybody-container.everybody-container--yellow
+                    .everybody-container__box
+                        .everybody-container__counter 02
+                        .everybody-container__header Заполните данные о себе или вашей компании
+                        .everybody-container__content 
+                            .everybody-container__subheader Зарегистрируйтесь как физическое лицо или компания
+                            .everybody-container__paragraph
+                                | Расскажите о себе или вашей компании
+                                br
+                                | Дайте доступ вашим сотрудникам для совместного пользования рекламным кабентомновый, просто зайдите с помощью предыдущих настроек
+                    .everybody-container__image 
+                        img(src="./assets/images/content/main__everybody2.svg", alt="Main Evetybody 2")
+                .everybody-container.everybody-container--green
+                    .everybody-container__box
+                        .everybody-container__counter 03
+                        .everybody-container__header Создайте карточку события и запустите рекламную кампанию
+                        .everybody-container__content 
+                            .everybody-container__subheader Прикрепите событие к рекламной кампании и выберете настройки показа:
+                            ul.everybody-container__list
+                                li.everybody-container__list-item Пол
+                                li.everybody-container__list-item Возраст
+                                li.everybody-container__list-item Интересы
+                                li.everybody-container__list-item Географию показа 
+                                li.everybody-container__list-item и пр.
+                    .everybody-container__image 
+                        img(src="./assets/images/content/main__everybody3.svg", alt="Main Evetybody 3")
+            section.section.main--level
+                .section-header Реклама для бизнеса любого уровня
+                .level-container 
+                    .level-container__card 
+                        .card-image(style="background: url(./assets/images/content/main__level1.svg)", alt="Level 1")
+                        .card-content
+                            .card-content__header Для небольших вечеринок
+                            .card-content__content Организуйте крутую вечеринку, пригласив на нее своих будущих новых друзей
+                    .level-container__card 
+                        .card-image(style="background: url(./assets/images/content/main__level2.svg)", alt="Level 2")
+                        .card-content
+                            .card-content__header Для рок-группы и камерного оркестра
+                            .card-content__content Проведите музыкальный концерт своей группы, собрав отзывчивую аудиторию
+                    .level-container__card 
+                        .card-image(style="background: url(./assets/images/content/main__level3.svg)", alt="Level 3")
+                        .card-content
+                            .card-content__header Для профессиональных агентств организации мероприятий
+                            .card-content__content Соберите крупное мероприятие более чем на 250 человек
+            section.section.main--now
+                .now-header Начните рекламировать свое мероприятие прямо сейчас!
+                .now-subheader Заполните форму и получите демо-доступ к рекламному кабинету Tadam
+                .now-container 
+                    .now-container__button.apply-btn Попробовать
+                    .now-container__image 
+                        img(src="./assets/images/content/main__now.svg", alt="Now 1")
+            section.section.main--help#toHelp
+                .section-header Часто задаваемые вопросы
+                .help-container
+                    .faq-container 
+                        .faq-block 
+                            .faq-question 
+                                .faq-question__content Окей, а кто сидит в Tadam
+                                .question-indicator 
+                                    span.cross-one 
+                                    span.cross-two
+                            .faq-answer 
+                                .faq-answer__content Наша аудитория — это молодая и активная часть Москвы! Это парни и девушки от 18 в среднем до 35 лет. Они привыкли посещать новые места и открывать для себя интересные события, охотно рассказывать об этом друзьям и делиться впечатлениями. В тоже время они всегда рады вернуться в любимое заведение, чтобы насладиться знакомой и приятной атмосферой.
+                                a(href="#").faq-answer__link Подробнее об аудитории
+                        .faq-block 
+                            .faq-question 
+                                .faq-question__content Сколько человек зарегистрируется на мое мероприятие?
+                                .question-indicator 
+                                    span.cross-one 
+                                    span.cross-two
+                            .faq-answer 
+                                .faq-answer__content Наша аудитория — это молодая и активная часть Москвы! Это парни и девушки от 18 в среднем до 35 лет. Они привыкли посещать новые места и открывать для себя интересные события, охотно рассказывать об этом друзьям и делиться впечатлениями. В тоже время они всегда рады вернуться в любимое заведение, чтобы насладиться знакомой и приятной атмосферой.
+                                a(href="#").faq-answer__link Подробнее об аудитории
+                        .faq-block 
+                            .faq-question 
+                                .faq-question__content Что нельзя публиковать?
+                                .question-indicator 
+                                    span.cross-one 
+                                    span.cross-two
+                            .faq-answer 
+                                .faq-answer__content Наша аудитория — это молодая и активная часть Москвы! Это парни и девушки от 18 в среднем до 35 лет. Они привыкли посещать новые места и открывать для себя интересные события, охотно рассказывать об этом друзьям и делиться впечатлениями. В тоже время они всегда рады вернуться в любимое заведение, чтобы насладиться знакомой и приятной атмосферой.
+                                a(href="#").faq-answer__link Подробнее об аудитории
+                        .faq-block 
+                            .faq-question 
+                                .faq-question__content Как аудитория находит Tadam?
+                                .question-indicator 
+                                    span.cross-one 
+                                    span.cross-two
+                            .faq-answer 
+                                .faq-answer__content Наша аудитория — это молодая и активная часть Москвы! Это парни и девушки от 18 в среднем до 35 лет. Они привыкли посещать новые места и открывать для себя интересные события, охотно рассказывать об этом друзьям и делиться впечатлениями. В тоже время они всегда рады вернуться в любимое заведение, чтобы насладиться знакомой и приятной атмосферой.
+                                a(href="#").faq-answer__link Подробнее об аудитории
+                        .faq-block 
+                            .faq-question 
+                                .faq-question__content Вижу ошибки в рекламном кабинете. Что делать?
+                                .question-indicator 
+                                    span.cross-one 
+                                    span.cross-two
+                            .faq-answer 
+                                .faq-answer__content Наша аудитория — это молодая и активная часть Москвы! Это парни и девушки от 18 в среднем до 35 лет. Они привыкли посещать новые места и открывать для себя интересные события, охотно рассказывать об этом друзьям и делиться впечатлениями. В тоже время они всегда рады вернуться в любимое заведение, чтобы насладиться знакомой и приятной атмосферой.
+                                a(href="#").faq-answer__link Подробнее об аудитории
+                    .faq-questionary 
+                        .blue-circle 
+                        .faq-questionary__image 
+                            img(src="./assets/images/content/main__question.svg", alt="Question Logo")
+                        .faq-questionary__header Остались вопросы?
+                        .faq-questionary__subheader Оставьте заявку и наш менеджер свяжется с вами чтобы ответить на все вопросы
+                        .faq-questionary__button.apply-btn Оставить заявку 
+        footer.footer
+            .footer-row
+                .logo-container 
+                    .logo 
+                        img(src="./assets/images/content/logo.svg", alt="Company Logo")
+                    .logo-caption Tadam
+                .navigation 
+                    a(href="#toAbout").navigation-link О проекте
+                    a(href="#toProcess").navigation-link Как работает
+                    a(href="#toAbilities").navigation-link Возможности
+                    a(href="#toHelp").navigation-link FAQ
+                .contacts 
+                    a(href="tel:+79991235476").phone +7 999 123 54 76 
+                    a(href="mailto:tadam.official@gmail.com").mail tadam.official@gmail.com 
+                    a(href="https://instagram.com/link").social
+                         .social-icon 
+                            img(src="./assets/images/content/instagram.svg", alt="Instagram logo")
+                         .social-link @link
+                .footer__apply.apply-btn Попробовать
+            .footer-row--smalled 
+                .company-name ©2022 Tadam
+                a(href="./privacy").company-privacy Политика конфиденциальности
+                a(href="./agreement").company-agreement Пользовательское соглашение
+                a(href="https://yurin.biz" target="_blank").company-developer Сделано в Студии Юрина
+        .dark-layer.js--hidden
+            .form.apply-form#applyForm 
+                .form-close#closeForm
+                    span.cross-one 
+                    span.cross-two
+                .form-header Оставить заявку
+                .form-subheader Заполните форму и получите демо-доступ к рекламному кабинету Tadam
+                label(for="userName") 
+                    input.form-input#userName(type="text", name="userName", placeholder="ФИО")
+                label(for="userCompany") 
+                    input.form-input#userCompany(type="text", name="userName" ,placeholder="E-mail")
+                label(for="userPhone") 
+                    input.form-input#userPhone(type="text", name="userName" ,placeholder="Телефон", data-inputmask="'mask' : '+7(999) 999-99-99'", inputmode="text")
+                
+                button.form-button(type="submit") Попробовать
+                .form-caption Нажимая на кнопку, вы автоматически соглашаетесь с нашей политикой конфиденциальности
+            
+        
+        script(src="./assets/js/jquery.min.js") 
+        script(src="./assets/js/plugins.min.js") 
+        script(src="./assets/js/main.min.js") 
