@@ -21,7 +21,7 @@ $form_subheader = get_field('form_subheader');
                 href="mailto:<?=$email_to?>"><?=$email_to?></a>
             <a class="social" href="https://instagram.com/<?=$instagram?>">
                 <div class="social-icon"> <img
-                        src=<?php echo get_template_directory_uri() . '/assets/images/content/instagram.svg' ?>
+                        src=<?php echo get_template_directory_uri() . '/assets/images/content/Instagram.svg' ?>
                         alt="Instagram logo"></div>
                 <div class="social-link">@<?=$instagram?></div>
             </a>
@@ -38,8 +38,7 @@ $form_subheader = get_field('form_subheader');
     <form class="form apply-form" id="applyForm">
         <div class="form-close" id="closeForm"><span class="cross-one"> </span><span class="cross-two"></span></div>
         <div class="form-header"><?=$form_header?></div>
-        <div class="form-subheader"><?=$form_subheader?></div><label
-            for="userName">
+        <div class="form-subheader"><?=$form_subheader?></div><label for="userName">
             <input class="form-input" id="userName" type="text" name="userName" placeholder="ФИО"></label>
         <label for="userMail">
             <input class="form-input" id="userMail" type="text" name="userMail" placeholder="E-mail">
@@ -53,11 +52,11 @@ $form_subheader = get_field('form_subheader');
         </div>
     </form>
 </div>
-<script src=<?php echo get_template_directory_uri() . '/assets/js/jquery.min.js' ?>">
+<script src=<?php echo get_template_directory_uri() . '/assets/js/jquery.min.js' ?>>
 </script>
-<script src=<?php echo get_template_directory_uri() . '/assets/js/plugins.min.js' ?>">
+<script src=<?php echo get_template_directory_uri() . '/assets/js/plugins.min.js' ?>>
 </script>
-<script src=<?php echo get_template_directory_uri() . '/assets/js/main.min.js' ?>">
+<script src=<?php echo get_template_directory_uri() . '/assets/js/main.min.js' ?>>
 </script>
 </body>
 

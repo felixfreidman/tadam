@@ -77,7 +77,7 @@ function ajax_form()
         $response = '<div class="applied-screen" id="appliedForm">
 <div class="form-close" id="closeAppliedForm"><span class="cross-one"> </span><span class="cross-two"></span>
 </div><img class="applied-icon"
-    src="https://tadam.yurin.biz/wp-content/themes/tadam/assets/images/content/main__applied.svg"
+    src="'.get_template_directory_uri() . '/assets/images/content/main__applied.svg"'.'
 alt="Form Applied">
 <div class="applied-header">Спасибо за заявку</div>
 <div class="applied-subheader">Менеджер свяжется с вами в ближайшее время</div>

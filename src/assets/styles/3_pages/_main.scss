@@ -342,6 +342,7 @@ a {
             }
             .greeting-button {
                 width: 50%;
+                max-width: 267px;
             }
         }
         .greeting-image {
@@ -356,6 +357,7 @@ a {
             display: flex;
             flex-direction: column;
             align-items: start;
+            width: 100%;
             &__header {
                 font-feature-settings: "pnum" on, "lnum" on;
                 font-weight: 700;
@@ -983,19 +985,23 @@ a {
         border: 1px solid #eaeaea;
         border-radius: 8px;
         font-feature-settings: "pnum" on, "lnum" on;
-        font-weight: 400;
+        font-weight: 500;
         font-size: 14px;
         line-height: 18px;
-        color: #000;
+        color: #060e17;
         margin-bottom: 24px;
         position: relative;
         outline: none;
+        &:focus {
+            border: 1px solid #4598f6
+        }
         &::placeholder {
             font-feature-settings: "pnum" on, "lnum" on;
-            font-weight: 400;
+            font-weight: 500;
             font-size: 14px;
-            line-height: 18px;
-            color: #8e8e8e;
+            line-height: 16px;
+            font-feature-settings: "pnum" on, "lnum" on;
+            color: #9097a3;
         }
         &--warning {
             border: 1px solid #cc0000;

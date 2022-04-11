@@ -26,8 +26,8 @@ $stats_main_header = get_field('stats_main_header');
         <div class="section-container">
             <div class="greeting-container">
                 <div class="greeting-header"><?=$main_header?></div>
-                <div class="greeting-subheader"> Управляйте рекламой без рутины и лишних расходов<span> Уже </span><a
-                        class="greeting-subheader__link" href="#">более 1 000 активных пользователей</a> в Москве</div>
+                <div class="greeting-subheader"> Управляйте рекламой без рутины и лишних расходов<div> Уже <a
+                        class="greeting-subheader__link" href="#">более 1 000 активных пользователей</a> в Москве</div></div>
                 <div class="greeting-button apply-btn"><?=$apply_text?></div>
             </div>
             <div class="greeting-image"> <img
