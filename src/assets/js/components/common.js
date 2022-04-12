@@ -44,4 +44,10 @@ if (!windowLocation.includes("privacy")) {
   $(document).ready(function () {
     $("#userPhone").inputmask();
   });
+
+  window.onclick = function (event) {
+    if (event.target == darkLayer) {
+      darkLayer.classList.toggle("js--hidden");
+    }
+  };
 }
